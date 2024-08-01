@@ -118,6 +118,7 @@ const About = () => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
+    console.log("sr::", sr)
     if (prefersReducedMotion) {
       return;
     }
@@ -125,7 +126,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Three.js', 'Node.js', 'Python'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -174,7 +175,7 @@ const About = () => {
             <StaticImage
               className="img"
               src="../../images/me.jpg"
-              width={500}
+              width={400}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
               alt="Headshot"
