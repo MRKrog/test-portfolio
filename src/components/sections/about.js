@@ -118,7 +118,6 @@ const About = () => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    console.log("sr::", sr)
     if (prefersReducedMotion) {
       return;
     }

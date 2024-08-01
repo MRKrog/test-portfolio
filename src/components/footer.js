@@ -91,39 +91,47 @@ const Footer = () => {
 
   return (
     <StyledFooter>
-      <StyledSocialLinks>
-        <ul>
-          {socialMedia &&
-            socialMedia.map(({ name, url }, i) => (
-              <li key={i}>
-                <a href={url} aria-label={name}>
-                  <Icon name={name} />
-                </a>
-              </li>
-            ))}
-        </ul>
-      </StyledSocialLinks>
-
       <StyledCredit tabindex="-1">
-        <a href="https://github.com/bchiang7/v4">
-          <div>Designed &amp; Built by Michael Krog</div>
-
-          {githubInfo.stars && githubInfo.forks && (
-            <div className="github-stats">
-              <span>
-                <Icon name="Star" />
-                <span>{githubInfo.stars.toLocaleString()}</span>
-              </span>
-              <span>
-                <Icon name="Fork" />
-                <span>{githubInfo.forks.toLocaleString()}</span>
-              </span>
-            </div>
-          )}
-        </a>
+        <div>&copy; 2024</div>
       </StyledCredit>
     </StyledFooter>
-  );
+  )
+
+  // return (
+  //   <StyledFooter>
+  //     <StyledSocialLinks>
+  //       <ul>
+  //         {socialMedia &&
+  //           socialMedia.map(({ name, url }, i) => (
+  //             <li key={i}>
+  //               <a href={url} aria-label={name}>
+  //                 <Icon name={name} />
+  //               </a>
+  //             </li>
+  //           ))}
+  //       </ul>
+  //     </StyledSocialLinks>
+
+  //     <StyledCredit tabindex="-1">
+  //       <a href="https://github.com/bchiang7/v4">
+  //         <div>Built by Michael Krog</div>
+
+  //         {/* {githubInfo.stars && githubInfo.forks && (
+  //           <div className="github-stats">
+  //             <span>
+  //               <Icon name="Star" />
+  //               <span>{githubInfo.stars.toLocaleString()}</span>
+  //             </span>
+  //             <span>
+  //               <Icon name="Fork" />
+  //               <span>{githubInfo.forks.toLocaleString()}</span>
+  //             </span>
+  //           </div>
+  //         )} */}
+  //       </a>
+  //     </StyledCredit>
+  //   </StyledFooter>
+  // );
 };
 
 Footer.propTypes = {
